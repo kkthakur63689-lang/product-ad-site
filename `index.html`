@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Marketplace - Browse Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1><i class="fas fa-store"></i> Product Marketplace</h1>
+                <a href="admin.html" class="admin-btn"><i class="fas fa-plus"></i> Add Product</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Load products on page load
+        window.onload = function() {
+            loadProducts();
+        };
+    </script>
+</body>
+</html>
